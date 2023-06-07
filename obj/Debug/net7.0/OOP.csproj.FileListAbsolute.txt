@@ -1,0 +1,5 @@
+C:\Users\jp10525\Desktop\Folder Structure\Dev Bronze Udemy\OOP\obj\Debug\net7.0\OOP.csproj.AssemblyReference.cache
+C:\Users\jp10525\Desktop\Folder Structure\Dev Bronze Udemy\OOP\obj\Debug\net7.0\OOP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jp10525\Desktop\Folder Structure\Dev Bronze Udemy\OOP\obj\Debug\net7.0\OOP.AssemblyInfoInputs.cache
+C:\Users\jp10525\Desktop\Folder Structure\Dev Bronze Udemy\OOP\obj\Debug\net7.0\OOP.AssemblyInfo.cs
+C:\Users\jp10525\Desktop\Folder Structure\Dev Bronze Udemy\OOP\obj\Debug\net7.0\OOP.csproj.CoreCompileInputs.cache
