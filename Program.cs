@@ -9,11 +9,6 @@ using System.Threading.Tasks;
 namespace Program {
     public class Program {
         static void Main(string[] args) {
-            //Work work = new Work();
-            //work.DoWorkV1();
-            //Console.WriteLine("Do Version 2");
-            //Console.ReadKey();
-            //work.DoWorkV2();
             OutfitCharacters begin = new OutfitCharacters();
             begin.CreateCharacters(4);
             Combat fight = new Combat(begin.GetFirstFighter(), begin.GetSecondFighter());
