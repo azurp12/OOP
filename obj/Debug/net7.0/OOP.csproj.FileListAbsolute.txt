@@ -3,3 +3,13 @@ C:\Users\jp10525\Desktop\Folder Structure\Dev Bronze Udemy\OOP\obj\Debug\net7.0\
 C:\Users\jp10525\Desktop\Folder Structure\Dev Bronze Udemy\OOP\obj\Debug\net7.0\OOP.AssemblyInfoInputs.cache
 C:\Users\jp10525\Desktop\Folder Structure\Dev Bronze Udemy\OOP\obj\Debug\net7.0\OOP.AssemblyInfo.cs
 C:\Users\jp10525\Desktop\Folder Structure\Dev Bronze Udemy\OOP\obj\Debug\net7.0\OOP.csproj.CoreCompileInputs.cache
+C:\Users\jp10525\Desktop\Folder Structure\Dev Bronze Udemy\OOP\bin\Debug\net7.0\OOP.exe
+c:\Users\jp10525\Desktop\Folder Structure\Dev Bronze Udemy\OOP\bin\Debug\net7.0\OOP.deps.json
+c:\Users\jp10525\Desktop\Folder Structure\Dev Bronze Udemy\OOP\bin\Debug\net7.0\OOP.runtimeconfig.json
+C:\Users\jp10525\Desktop\Folder Structure\Dev Bronze Udemy\OOP\bin\Debug\net7.0\OOP.dll
+C:\Users\jp10525\Desktop\Folder Structure\Dev Bronze Udemy\OOP\bin\Debug\net7.0\OOP.pdb
+C:\Users\jp10525\Desktop\Folder Structure\Dev Bronze Udemy\OOP\obj\Debug\net7.0\OOP.dll
+C:\Users\jp10525\Desktop\Folder Structure\Dev Bronze Udemy\OOP\obj\Debug\net7.0\refint\OOP.dll
+C:\Users\jp10525\Desktop\Folder Structure\Dev Bronze Udemy\OOP\obj\Debug\net7.0\OOP.pdb
+c:\Users\jp10525\Desktop\Folder Structure\Dev Bronze Udemy\OOP\obj\Debug\net7.0\OOP.genruntimeconfig.cache
+c:\Users\jp10525\Desktop\Folder Structure\Dev Bronze Udemy\OOP\obj\Debug\net7.0\ref\OOP.dll

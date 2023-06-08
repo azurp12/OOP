@@ -15,7 +15,7 @@ namespace Program {
             //Console.ReadKey();
             //work.DoWorkV2();
             OutfitCharacters begin = new OutfitCharacters();
-            begin.CreateCharacters(3);
+            begin.CreateCharacters(4);
             Combat fight = new Combat(begin.GetFirstFighter(), begin.GetSecondFighter());
             fight.Fight();
 
@@ -37,7 +37,7 @@ namespace Program {
         private int health { get; set; }
 
         private int CurrentHealth { get; set; }
-        private int healthMod { get; set; } =0;
+        private int healthMod { get; set; }
 
         private IItem helm = null;
         private IItem chest = null;
@@ -46,7 +46,7 @@ namespace Program {
         public Character(string name, int health) {
             this.name = name;
             this.health = health;
-            this.CurrentHealth = health;
+            this.CurrentHealth = 1;
         }
 
         public int GetHealth() => this.health;
@@ -62,9 +62,9 @@ namespace Program {
         public void SetName(string name) => this.name = name;
 
 
-        public void AddCurrentHealth(int health) => this.health += health;
+        public void AddCurrentHealth(int health) => this.CurrentHealth += health;
 
-        public void SubCurrentHealth(int health) => this.health -= health;
+        public void SubCurrentHealth(int health) => this.CurrentHealth -= health;
 
         public void EquipItem(IItem item) {
             switch (item.GetArmorType()) {
@@ -82,7 +82,7 @@ namespace Program {
         public int GetTotalHealth() {
             return this.health+this.healthMod;
         }
-        public void ResetCurrentHealth() => this.CurrentHealth = GetTotalHealth();
+        public void ResetCurrentHealth() { this.CurrentHealth = GetTotalHealth();}
         public IItem[] GetEquipment() => new IItem[] { helm, chest, shoes };
 
         public void UpdateArmorModTotal() => this.healthMod = helm.GetArmorMod() + chest.GetArmorMod() + shoes.GetArmorMod();
@@ -151,12 +151,12 @@ namespace Program {
             Random random = new Random();
             Chars = new Character[number];
             for (int i = 0; i < number; i++) {
-                Console.WriteLine("Creating Character "+i+":\nPlease enter a name.");
-                Chars[i] = new Character(Console.ReadLine(),random.Next(51)+5);
+                Chars[i] = new Character(CreateChracterName(),random.Next(51)+5);
             }
             CreateItems();
             EquipItems();
             GetFightersReady();
+            
         }
 
         private void GetFightersReady() {
@@ -202,7 +202,22 @@ namespace Program {
                 "Helmet of Discipline"};
             return names[random.Next(names.Length)];
         }
+        private static string CreateChracterName() {
+            Random random = new Random();
+            string [] names = {
+                "Horace Osborne",
+                "Wilbur Blackwell",
+                "Warren Knight",
+                "Edward Lamb",
+                "Jack Emerson",
+                "Brad Bailey",
+                "Jacob Hunter",
+                "Patrick Manning",
+                "Jason Bowers",
+                "Douglas Graham"};
 
+            return names[random.Next(names.Length)];
+        }
         private static string ChestName() {
             Random random = new Random();
             string[] names = {
@@ -264,7 +279,9 @@ namespace Program {
         public void Fight() {
             Random random = new Random();
             int hit = 0;
-            DisplayFighters();
+            DisplayFightersFull();
+            Console.WriteLine("\nThe program will resume in 10 seconds:");
+            Thread.Sleep(10000);
             while (combatant1.GetCurrentHealth() > 0 && combatant2.GetCurrentHealth() > 0) {
                 hit = random.Next(26);
                 // fighter 1 goes
@@ -288,6 +305,8 @@ namespace Program {
             
             else 
                 Console.WriteLine(combatant2.GetName() +" hits "+ combatant1.GetName()+ " for " + hit+" points of damage.");
+
+            Console.WriteLine("\n");
         }
 
         private void CombatantHit(int hit, Boolean first = true) {
@@ -298,19 +317,20 @@ namespace Program {
         }
         
         private void DisplayFightersFull() {
-            Console.WriteLine("First Combatant:\n");
+            Console.WriteLine("First Combatant:");
             combatant1.DisplayCharacter();
             combatant1.DispalyEquipment();
-            Console.WriteLine("Second Combatant:\n");
+            Console.WriteLine("\nSecond Combatant:");
             combatant2.DisplayCharacter(); 
             combatant2.DispalyEquipment();
         }
         private void DisplayFighters() {
-            Console.WriteLine("First Combatant:\n");
+            Console.WriteLine("First Combatant:");
             combatant1.DisplayCharacter();
 
-            Console.WriteLine("Second Combatant:\n");
+            Console.WriteLine("\nSecond Combatant:");
             combatant2.DisplayCharacter();
+            Console.WriteLine("\n");
         }
 
         private void DisplayWinner() {
